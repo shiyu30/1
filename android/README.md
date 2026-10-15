@@ -1,5 +1,7 @@
-# Android 版像素小猫
+# Android 版：一键闪避 + 像素小猫
 
-这是现有 Windows 桌宠的 Android 原生适配版。需要 Android Studio、JDK 17 和 Android SDK 35；打开 `android/` 后运行即可。首次启动时点击“开启 / 显示小猫”，在系统设置中允许“显示在其他应用上层”。
+默认启动的是小游戏 **一键闪避**：拖动蓝色小点接黄色星星、躲红色方块。规则只需几秒就能明白；星星会增加分数和连击，分数越高下落越快。撞到红块后点屏幕重开，最高分会保存在手机上。
 
-桌宠以前台服务运行，支持悬浮显示、拖动和点击互动；通知栏可看到运行状态。当前版本使用 Java 原生 View 绘制像素猫，不需要第三方依赖。Android 模拟器或真机上验证悬浮窗最可靠。
+打开 `android/` 到 Android Studio，使用 JDK 17、Android SDK 35，运行到 Android 手机或模拟器即可。游戏不需要网络和第三方库。
+
+原来的桌宠仍保留在 `MainActivity` 与 `CatService` 中；若要从设置页启动桌宠，可将 `MainActivity` 设为启动 Activity，或在 Android Studio 中直接运行它。
